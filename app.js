@@ -1028,7 +1028,7 @@ function bindEvents() {
   els.copyAllBtn.addEventListener('click', async () => {
     const p = getActiveProject();
     if (!p || !p.newText) return;
-    const allText = p.newText.map(b => b.content).join('\n\n');
+    const allText = p.newText.map(b => b.content).join(' ');
     const copied = await copyToClipboard(allText);
     if (copied) {
       const originalText = els.copyAllBtn.textContent;
